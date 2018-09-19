@@ -2,6 +2,10 @@
 
 ## Workshop #1
 
+### Blockchain Demo
+
+https://anders.com/blockchain/, the demo is worth watching to understand how does a blockchain work. 
+
 ### Ethereum Developemnt Environment
 
 * **Node.js LTS**
