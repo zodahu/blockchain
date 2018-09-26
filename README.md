@@ -26,7 +26,7 @@ Ref: https://courses.blockgeeks.com/lesson/peer-to-peer-network/
 * Node.js LTS
     * https://nodejs.org/en/
     * $ node --version
-    * $ node install -g lite-server
+    * $ npm install -g lite-server
 
 * MetaMask Chrome Extension
     * https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn
