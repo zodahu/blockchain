@@ -41,3 +41,9 @@ Ref: https://courses.blockgeeks.com/lesson/peer-to-peer-network/
     * https://remix.readthedocs.io/en/latest/tutorial_remixd_filesystem.html
     * $ npm install -g remixd
     * $ remixd -s \<absolute-path-to-the-shared-folder\>
+
+### Ethereum TESTNET
+
+* Rankeby
+    * Give me Ether: https://www.rinkeby.io/#faucet
+    * Rankeby Ethereum browser: https://rinkeby.etherscan.io/
