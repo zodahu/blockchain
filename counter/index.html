@@ -29,9 +29,10 @@
         })
 
         function initContract() {
-            web3 = new Web3(web3.currentProvider);
-            var address = "0x552b943b5cb251f589ea0f03b3391ec56cf74e3e";
-            var abi = [
+            web3 = new Web3(web3.currentProvider); // Use MetaMask in browser
+            console.log(web3.version);
+            var address = "0x552b943b5cb251f589ea0f03b3391ec56cf74e3e"; // Smart contract address
+            var abi = [ // Application Binary Interface is a json object used for representing smart contract
                 {
                     "constant": false,
                     "inputs": [],
@@ -84,6 +85,7 @@
         }
 
         function getValue() {
+            // call: will call the “constant” method but can’t alter the smart contract state
             contract.methods.getCounter().call().then((result) => {
                 $('#counter-value').html(result);
             })
@@ -92,24 +94,12 @@
         $('#increment').click(function () {
             web3.eth.getAccounts().then(function (accounts) {
                 var acct = accounts[0];
+                // send: will send a transaction to the smart contract and can alter the smart contract state
                 return contract.methods.increment().send({ from: acct });
             }).then(function (tx) {
                 console.log(tx);
                 var curr = parseInt($('#counter-value').html());
                 $('#counter-value').html(curr + 1);
-            }).catch(function (err) {
-                console.log(err);
-            })
-        })
-
-        $('#decrement').click(function () {
-            web3.eth.getAccounts().then(function (accounts) {
-                var acct = accounts[0];
-                return contract.methods.increment().send({ from: acct });
-            }).then(function (tx) {
-                console.log(tx);
-                var curr = parseInt($('#counter-value').html());
-                $('#counter-value').html(curr - 1);
             }).catch(function (err) {
                 console.log(err);
             })
