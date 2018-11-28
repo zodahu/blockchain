@@ -1,6 +1,6 @@
 # Blockchain
 
-## Workshop #1
+## Learning #1
 
 ### Blockchain Demo
 * https://anders.com/blockchain/
